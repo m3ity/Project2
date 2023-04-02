@@ -1,10 +1,11 @@
 #pragma once
 class Matrix{
 public:
-	int** matrix = nullptr;
-	int mrow = 0;
-	int mcol = 0;
+	int** matrix{ nullptr };
+	int mrow{};
+	int mcol{};
 	void print();
 	Matrix(int row, int col);
+	~Matrix();
 };
 

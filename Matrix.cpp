@@ -6,8 +6,14 @@ Matrix::Matrix(int row, int col) {
 	mrow = row;
 	mcol = col;
 	for (int i = 0; i < mrow; i++) {
-		matrix[i] = new int[mcol];
+		matrix[i] = new int[mcol]{};
 	}
+}
+Matrix::~Matrix() {
+	for (int i = 0; i < mrow; i++) {
+		delete[] matrix[i];
+	}
+	delete[] matrix;
 }
 void Matrix::print() {
 	for (int i = 0; i < mrow; i++) {
